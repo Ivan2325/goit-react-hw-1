@@ -1,36 +1,23 @@
+import '/reset.css'
+import React from "react";
+import Profile from "./Profile/Profile";
+import userData from "../userData.json";
 
-import Product from './Product';
-
-export default function App() {
+const App = () => {
   return (
     <div>
-      <h1>Best selling</h1>
-
-      <Product />
-      <Product />
-      <Product />
+      <Profile
+        name={userData.username}
+        tag={userData.tag}
+        location={userData.location}
+        image={userData.avatar}
+        stats={userData.stats}
+      />
     </div>
   );
-}
+};
 
-function Product() {
-    return (
-      <div>
-        <h2>Cookies</h2>
-      <p>Price: 999 credits</p>
-      </div>
-    );
-  };
+export default App;
+
   
-  export default function App() {
-    return (
-      <div>
-        <h1>Products</h1>
-  
-        <Product />
-        <Product />
-        <Product />
-      </div>
-    );
-  }
   
